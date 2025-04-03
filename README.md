@@ -23,11 +23,23 @@ This is a simple web-based 3D game built using HTML, CSS, JavaScript, and the Th
 
 No build steps or local server are strictly required for this basic version, as it uses ES module imports directly from a CDN.
 
+## Code Structure
+
+*   `index.html`: Main HTML file, includes the canvas and UI elements.
+*   `style.css`: Styles for the UI elements and canvas container.
+*   `script.js`: The main entry point, imports modules and orchestrates the game loop and interactions.
+*   `src/`: Directory containing the JavaScript modules:
+    *   `constants.js`: Defines game constants (speed, limits, colors, etc.).
+    *   `sceneSetup.js`: Initializes the Three.js scene, camera, renderer, lights.
+    *   `uiManager.js`: Handles updates and interactions with HTML UI elements.
+    *   `gameState.js`: Manages core game state (score, missed, pause/game over status).
+    *   `balloonManager.js`: Manages the creation, movement, and removal of 3D balloons.
+
 ## Technologies Used
 
 *   HTML5
 *   CSS3
-*   JavaScript (ES Modules)
+*   JavaScript (ES Modules - modular structure in `src/`)
 *   Three.js (r163 via CDN)
 
 ## Potential Future Improvements
