@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Hide scrollbars */
+    /* Example gradient - light blue to white */
+    background: linear-gradient(to bottom, #87CEEB, #FFFFFF);
+    height: 100vh; /* Ensure gradient covers full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    /* Remove flex centering, canvas handles layout */
+}
+
+/* Remove old game container styles */
+/* #game-container { ... } */
+
+/* Style the canvas container/body */
+body {
+    margin: 0;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+#game-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block; /* Remove extra space below canvas */
+    background: linear-gradient(to bottom, #87CEEB, #FFFFFF); /* Keep background */
+    cursor: crosshair; /* Keep crosshair */
+}
+
+/* --- UI Element Styles --- */
+#ui-container { /* Optional wrapper if needed */
+    position: relative; /* Allows absolute positioning of children */
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow clicks to pass through to canvas */
+}
+
+#stats {
+    /* Keep position, z-index, background */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    pointer-events: auto; /* Allow interaction with UI */
+}
+
+#pause-button {
+    margin-left: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+    pointer-events: auto; /* Allow interaction */
+}
+
+#score, #missed {
+    font-size: 1.2em; /* Slightly smaller */
+    font-weight: bold;
+    color: #333;
+    /* Keep font styles */
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0; /* Remove bottom margin if flex handles alignment */
+    margin-right: 10px; /* Keep right margin */
+}
+
+#missed {
+    color: #c00;
+    margin-right: 10px;
+}
+
+#paused-message, #game-over-message {
+    /* Center messages on screen */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center align */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly darker */
+    color: white;
+    padding: 30px 40px; /* Increase padding */
+    border-radius: 10px;
+    z-index: 20;
+    pointer-events: auto; /* Allow interaction with buttons inside */
+}
+
+#paused-message h2, #game-over-message h2 {
+    margin: 0 0 15px 0;
+    font-size: 1.8em;
+}
+
+#restart-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    pointer-events: auto; /* Allow interaction */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Remove old .balloon styles */
+/* .balloon { ... } */
+/* .balloon.blue { ... } */
+/* ... etc ... */
+
+/* Remove old animation styles */
+/* @keyframes pop { ... } */
+/* .balloon.popping { ... } */

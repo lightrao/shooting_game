@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Balloon Shooter</title> <!-- Updated Title -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic canvas styling */
+        #game-canvas { display: block; width: 100%; height: 100%; }
+        /* Ensure UI overlays canvas */
+        #stats, #paused-message, #game-over-message { position: absolute; z-index: 10; }
+    </style>
+</head>
+<body>
+    <!-- UI Elements remain, but container div is replaced by canvas -->
+    <div id="ui-container"> <!-- Wrapper for UI elements -->
+        <div id="stats">
+            <div id="score">Score: 0</div>
+            <div id="missed">Missed: 0 / 5</div>
+            <button id="pause-button">Pause</button>
+        </div>
+        <div id="paused-message" class="hidden">
+             <h2>Paused</h2>
+        </div>
+        <div id="game-over-message" class="hidden">
+            <h2>Game Over!</h2>
+            <button id="restart-button">Restart</button>
+        </div>
+    </div>
+
+    <!-- Canvas for Three.js rendering -->
+    <canvas id="game-canvas"></canvas>
+
+    <!-- Include Three.js Library -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.163.0/build/three.module.js"
+            }
+        }
+    </script>
+    <!-- Update script type to module for imports -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
